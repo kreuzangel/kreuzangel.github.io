@@ -173,7 +173,6 @@ p{
 }
 .gruncon{
  display: grid;
- align-items: center; 
  grid-template-columns: 40vw auto;
  column-gap: 1vw;
 }
@@ -210,14 +209,11 @@ p{
 }
 .left-column {
     display: grid;
-    grid-template-rows: 15vw 25vw 20vw; /* Three equal rows */
     gap: 10px; /* Spacing between rows */
 }
 .right-column {
     display: block; /* Remove flex to let the image take the full grid cell */
-    width: 100%; /* Ensure it takes the full column width */
-    height: 100%; /* Ensure it takes the full column height */
-    overflow: hidden; /* Prevent overflow during image scaling */
+    overflow:hidden; /* Prevent overflow during image scaling */
 }
 .right-column img {
     width: 100%; /* Ensures the image fills the width */
@@ -227,15 +223,16 @@ p{
 }
 .row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-.row .rowimgcon{
+.rowimgcon{
+    flex: auto;
     position: relative; /* Allows stacking effects if needed */
-    overflow: hidden; /* Ensures no overflow during scaling */
+    overflow: hidden; /* Ensures no overflow during scaling */ 
     border-radius: 8px; /* Optional: adds rounded corners */
     transition: transform 0.3s ease-in-out; /* Smooth transition */
     transform-origin: left center; /* Zooms from the left side */
+
 }
 .row img{
     width: 100%; 
