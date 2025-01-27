@@ -921,101 +921,41 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# Research Section
 --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
+
+.research .content h2 {
+  font-weight: 700;
+  font-size: 24px;
 }
 
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  text-align: center;
-  min-height: 320px;
+.research .content ul {
+  list-style: none;
+  padding: 0;
 }
 
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: 0 auto;
+.research .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
+.research .content ul strong {
+  margin-right: 10px;
 }
 
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 40%);
-  font-size: 26px;
+.research .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
   line-height: 0;
 }
 
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
+.research .container{
+  padding-bottom: 4%;
 }
 
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
 
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 15px 15px 15px;
-  padding: 20px;
-  background-color: var(--surface-color);
-  position: relative;
-  margin-bottom: 35px;
-  border-radius: 6px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials .testimonial-item p::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 20px solid var(--surface-color);
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: -20px;
-  left: calc(50% - 20px);
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 40px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -1023,17 +963,17 @@ section,
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 3%;
 }
 
 @media (max-width: 575px) {
   .contact .info-wrap {
-    padding: 20px;
+    padding: 0%;
   }
 }
 
 .contact .info-item {
-  margin-bottom: 40px;
+  margin-bottom: 3%;
 }
 
 .contact .info-item i {
@@ -1054,7 +994,7 @@ section,
   padding: 0;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .contact .info-item p {
@@ -1068,54 +1008,58 @@ section,
   color: var(--contrast-color);
 }
 
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+.contact-section {
+  background: var(--surface-color);
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
+.contact-section h2 {
+  margin-bottom: 2%;
+  text-align: center;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
+.form-group {
+  margin-bottom: 2%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 2%;
+  font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+.submit-btn:hover {
+  background-color: #0056b3;
 }
 
 /*--------------------------------------------------------------
